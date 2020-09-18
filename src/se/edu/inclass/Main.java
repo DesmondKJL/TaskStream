@@ -43,6 +43,7 @@ public class Main {
     public static void  printDataUsingStreams(ArrayList<Task> tasksData) {
         System.out.println("Printing using streams");
         tasksData.stream()
+                .filter((t) -> t instanceof Deadline)
                 .forEach(System.out::println);
     }
 
