@@ -54,4 +54,14 @@ public class Main {
             }
         }
     }
+
+    public static int countDeadlinesUsingStreams(ArrayList<Task> tasksData) {
+        System.out.println("Count deadlines using streams");
+        int count;
+        count = (int) tasksData.stream()
+                .filter((t) -> t instanceof Deadline)
+                .count();
+        return count;
+
+    }
 }
